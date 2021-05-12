@@ -1,0 +1,193 @@
+date,town,weather
+01/01/2020 12:00 AM,Tyson's Corner,Cloudy
+01/01/2020 12:00 AM,Reston,Cloudy
+01/01/2020 12:00 AM,Arlington,Partly Cloudy
+01/01/2020 12:00 AM,Fall's Church,Sunny
+01/01/2020 01:00 AM,Tyson's Corner,Cloudy
+01/01/2020 01:00 AM,Reston,Cloudy
+01/01/2020 01:00 AM,Arlington,Sunny
+01/01/2020 01:00 AM,Fall's Church,Partly Cloudy
+01/01/2020 02:00 AM,Tyson's Corner,Rainy
+01/01/2020 02:00 AM,Reston,Rainy
+01/01/2020 02:00 AM,Arlington,Rainy
+01/01/2020 02:00 AM,Fall's Church,Rainy
+01/01/2020 03:00 AM,Tyson's Corner,Sunny
+01/01/2020 03:00 AM,Reston,Partly Cloudy
+01/01/2020 03:00 AM,Arlington,Partly Cloudy
+01/01/2020 03:00 AM,Fall's Church,Partly Cloudy
+01/01/2020 04:00 AM,Tyson's Corner,Partly Cloudy
+01/01/2020 04:00 AM,Reston,Cloudy
+01/01/2020 04:00 AM,Arlington,Cloudy
+01/01/2020 04:00 AM,Fall's Church,Rainy
+01/01/2020 05:00 AM,Tyson's Corner,Cloudy
+01/01/2020 05:00 AM,Reston,Sunny
+01/01/2020 05:00 AM,Arlington,Partly Cloudy
+01/01/2020 05:00 AM,Fall's Church,Cloudy
+01/01/2020 06:00 AM,Tyson's Corner,Sunny
+01/01/2020 06:00 AM,Reston,Sunny
+01/01/2020 06:00 AM,Arlington,Rainy
+01/01/2020 06:00 AM,Fall's Church,Partly Cloudy
+01/01/2020 07:00 AM,Tyson's Corner,Sunny
+01/01/2020 07:00 AM,Reston,Rainy
+01/01/2020 07:00 AM,Arlington,Rainy
+01/01/2020 07:00 AM,Fall's Church,Partly Cloudy
+01/01/2020 08:00 AM,Tyson's Corner,Cloudy
+01/01/2020 08:00 AM,Reston,Rainy
+01/01/2020 08:00 AM,Arlington,Cloudy
+01/01/2020 08:00 AM,Fall's Church,Rainy
+01/01/2020 09:00 AM,Tyson's Corner,Partly Cloudy
+01/01/2020 09:00 AM,Reston,Cloudy
+01/01/2020 09:00 AM,Arlington,Partly Cloudy
+01/01/2020 09:00 AM,Fall's Church,Sunny
+01/01/2020 10:00 AM,Tyson's Corner,Partly Cloudy
+01/01/2020 10:00 AM,Reston,Sunny
+01/01/2020 10:00 AM,Arlington,Cloudy
+01/01/2020 10:00 AM,Fall's Church,Sunny
+01/01/2020 11:00 AM,Tyson's Corner,Rainy
+01/01/2020 11:00 AM,Reston,Rainy
+01/01/2020 11:00 AM,Arlington,Rainy
+01/01/2020 11:00 AM,Fall's Church,Cloudy
+01/01/2020 12:00 PM,Tyson's Corner,Sunny
+01/01/2020 12:00 PM,Reston,Rainy
+01/01/2020 12:00 PM,Arlington,Rainy
+01/01/2020 12:00 PM,Fall's Church,Partly Cloudy
+01/01/2020 01:00 PM,Tyson's Corner,Rainy
+01/01/2020 01:00 PM,Reston,Sunny
+01/01/2020 01:00 PM,Arlington,Rainy
+01/01/2020 01:00 PM,Fall's Church,Partly Cloudy
+01/01/2020 02:00 PM,Tyson's Corner,Sunny
+01/01/2020 02:00 PM,Reston,Cloudy
+01/01/2020 02:00 PM,Arlington,Cloudy
+01/01/2020 02:00 PM,Fall's Church,Rainy
+01/01/2020 03:00 PM,Tyson's Corner,Rainy
+01/01/2020 03:00 PM,Reston,Cloudy
+01/01/2020 03:00 PM,Arlington,Cloudy
+01/01/2020 03:00 PM,Fall's Church,Cloudy
+01/01/2020 04:00 PM,Tyson's Corner,Rainy
+01/01/2020 04:00 PM,Reston,Rainy
+01/01/2020 04:00 PM,Arlington,Cloudy
+01/01/2020 04:00 PM,Fall's Church,Partly Cloudy
+01/01/2020 05:00 PM,Tyson's Corner,Partly Cloudy
+01/01/2020 05:00 PM,Reston,Cloudy
+01/01/2020 05:00 PM,Arlington,Rainy
+01/01/2020 05:00 PM,Fall's Church,Partly Cloudy
+01/01/2020 06:00 PM,Tyson's Corner,Partly Cloudy
+01/01/2020 06:00 PM,Reston,Rainy
+01/01/2020 06:00 PM,Arlington,Sunny
+01/01/2020 06:00 PM,Fall's Church,Cloudy
+01/01/2020 07:00 PM,Tyson's Corner,Sunny
+01/01/2020 07:00 PM,Reston,Sunny
+01/01/2020 07:00 PM,Arlington,Sunny
+01/01/2020 07:00 PM,Fall's Church,Cloudy
+01/01/2020 08:00 PM,Tyson's Corner,Partly Cloudy
+01/01/2020 08:00 PM,Reston,Rainy
+01/01/2020 08:00 PM,Arlington,Cloudy
+01/01/2020 08:00 PM,Fall's Church,Cloudy
+01/01/2020 09:00 PM,Tyson's Corner,Cloudy
+01/01/2020 09:00 PM,Reston,Rainy
+01/01/2020 09:00 PM,Arlington,Sunny
+01/01/2020 09:00 PM,Fall's Church,Sunny
+01/01/2020 10:00 PM,Tyson's Corner,Partly Cloudy
+01/01/2020 10:00 PM,Reston,Rainy
+01/01/2020 10:00 PM,Arlington,Sunny
+01/01/2020 10:00 PM,Fall's Church,Rainy
+01/01/2020 11:00 PM,Tyson's Corner,Cloudy
+01/01/2020 11:00 PM,Reston,Rainy
+01/01/2020 11:00 PM,Arlington,Sunny
+01/01/2020 11:00 PM,Fall's Church,Partly Cloudy
+01/02/2020 12:00 AM,Tyson's Corner,Cloudy
+01/02/2020 12:00 AM,Reston,Rainy
+01/02/2020 12:00 AM,Arlington,Sunny
+01/02/2020 12:00 AM,Fall's Church,Sunny
+01/02/2020 01:00 AM,Tyson's Corner,Cloudy
+01/02/2020 01:00 AM,Reston,Cloudy
+01/02/2020 01:00 AM,Arlington,Cloudy
+01/02/2020 01:00 AM,Fall's Church,Cloudy
+01/02/2020 02:00 AM,Tyson's Corner,Rainy
+01/02/2020 02:00 AM,Reston,Sunny
+01/02/2020 02:00 AM,Arlington,Sunny
+01/02/2020 02:00 AM,Fall's Church,Partly Cloudy
+01/02/2020 03:00 AM,Tyson's Corner,Rainy
+01/02/2020 03:00 AM,Reston,Rainy
+01/02/2020 03:00 AM,Arlington,Sunny
+01/02/2020 03:00 AM,Fall's Church,Rainy
+01/02/2020 04:00 AM,Tyson's Corner,Rainy
+01/02/2020 04:00 AM,Reston,Sunny
+01/02/2020 04:00 AM,Arlington,Partly Cloudy
+01/02/2020 04:00 AM,Fall's Church,Partly Cloudy
+01/02/2020 05:00 AM,Tyson's Corner,Partly Cloudy
+01/02/2020 05:00 AM,Reston,Rainy
+01/02/2020 05:00 AM,Arlington,Partly Cloudy
+01/02/2020 05:00 AM,Fall's Church,Sunny
+01/02/2020 06:00 AM,Tyson's Corner,Partly Cloudy
+01/02/2020 06:00 AM,Reston,Cloudy
+01/02/2020 06:00 AM,Arlington,Partly Cloudy
+01/02/2020 06:00 AM,Fall's Church,Rainy
+01/02/2020 07:00 AM,Tyson's Corner,Partly Cloudy
+01/02/2020 07:00 AM,Reston,Rainy
+01/02/2020 07:00 AM,Arlington,Rainy
+01/02/2020 07:00 AM,Fall's Church,Cloudy
+01/02/2020 08:00 AM,Tyson's Corner,Rainy
+01/02/2020 08:00 AM,Reston,Partly Cloudy
+01/02/2020 08:00 AM,Arlington,Sunny
+01/02/2020 08:00 AM,Fall's Church,Cloudy
+01/02/2020 09:00 AM,Tyson's Corner,Cloudy
+01/02/2020 09:00 AM,Reston,Partly Cloudy
+01/02/2020 09:00 AM,Arlington,Sunny
+01/02/2020 09:00 AM,Fall's Church,Cloudy
+01/02/2020 10:00 AM,Tyson's Corner,Rainy
+01/02/2020 10:00 AM,Reston,Cloudy
+01/02/2020 10:00 AM,Arlington,Rainy
+01/02/2020 10:00 AM,Fall's Church,Sunny
+01/02/2020 11:00 AM,Tyson's Corner,Partly Cloudy
+01/02/2020 11:00 AM,Reston,Sunny
+01/02/2020 11:00 AM,Arlington,Cloudy
+01/02/2020 11:00 AM,Fall's Church,Sunny
+01/02/2020 12:00 PM,Tyson's Corner,Cloudy
+01/02/2020 12:00 PM,Reston,Partly Cloudy
+01/02/2020 12:00 PM,Arlington,Partly Cloudy
+01/02/2020 12:00 PM,Fall's Church,Cloudy
+01/02/2020 01:00 PM,Tyson's Corner,Partly Cloudy
+01/02/2020 01:00 PM,Reston,Cloudy
+01/02/2020 01:00 PM,Arlington,Rainy
+01/02/2020 01:00 PM,Fall's Church,Cloudy
+01/02/2020 02:00 PM,Tyson's Corner,Sunny
+01/02/2020 02:00 PM,Reston,Sunny
+01/02/2020 02:00 PM,Arlington,Partly Cloudy
+01/02/2020 02:00 PM,Fall's Church,Rainy
+01/02/2020 03:00 PM,Tyson's Corner,Rainy
+01/02/2020 03:00 PM,Reston,Sunny
+01/02/2020 03:00 PM,Arlington,Rainy
+01/02/2020 03:00 PM,Fall's Church,Cloudy
+01/02/2020 04:00 PM,Tyson's Corner,Partly Cloudy
+01/02/2020 04:00 PM,Reston,Partly Cloudy
+01/02/2020 04:00 PM,Arlington,Cloudy
+01/02/2020 04:00 PM,Fall's Church,Cloudy
+01/02/2020 05:00 PM,Tyson's Corner,Sunny
+01/02/2020 05:00 PM,Reston,Partly Cloudy
+01/02/2020 05:00 PM,Arlington,Cloudy
+01/02/2020 05:00 PM,Fall's Church,Partly Cloudy
+01/02/2020 06:00 PM,Tyson's Corner,Rainy
+01/02/2020 06:00 PM,Reston,Partly Cloudy
+01/02/2020 06:00 PM,Arlington,Cloudy
+01/02/2020 06:00 PM,Fall's Church,Sunny
+01/02/2020 07:00 PM,Tyson's Corner,Partly Cloudy
+01/02/2020 07:00 PM,Reston,Cloudy
+01/02/2020 07:00 PM,Arlington,Partly Cloudy
+01/02/2020 07:00 PM,Fall's Church,Cloudy
+01/02/2020 08:00 PM,Tyson's Corner,Cloudy
+01/02/2020 08:00 PM,Reston,Cloudy
+01/02/2020 08:00 PM,Arlington,Cloudy
+01/02/2020 08:00 PM,Fall's Church,Cloudy
+01/02/2020 09:00 PM,Tyson's Corner,Partly Cloudy
+01/02/2020 09:00 PM,Reston,Partly Cloudy
+01/02/2020 09:00 PM,Arlington,Sunny
+01/02/2020 09:00 PM,Fall's Church,Rainy
+01/02/2020 10:00 PM,Tyson's Corner,Cloudy
+01/02/2020 10:00 PM,Reston,Cloudy
+01/02/2020 10:00 PM,Arlington,Sunny
+01/02/2020 10:00 PM,Fall's Church,Rainy
+01/02/2020 11:00 PM,Tyson's Corner,Partly Cloudy
+01/02/2020 11:00 PM,Reston,Sunny
+01/02/2020 11:00 PM,Arlington,Cloudy
+01/02/2020 11:00 PM,Fall's Church,Partly Cloudy

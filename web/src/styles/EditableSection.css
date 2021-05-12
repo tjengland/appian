@@ -1,0 +1,10 @@
+.editable-section {
+  display: flex;
+  border-radius: 15px;
+  background-color: skyblue;
+}
+
+.editable-section .inputWrapper {
+  flex: 1;
+  padding: 20px;
+}

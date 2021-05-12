@@ -1,0 +1,8 @@
+.display-section {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  background-color: skyblue;
+  margin-top: 30px;
+  justify-content: space-evenly;
+}
