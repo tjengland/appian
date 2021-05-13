@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -16,6 +17,9 @@ type WeatherResponse struct {
 }
 
 func fetchWeather(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+
 	town := r.URL.Query().Get("town")
 	from := r.URL.Query().Get("from")
 	to := r.URL.Query().Get("to")
@@ -31,7 +35,7 @@ func fetchWeather(w http.ResponseWriter, r *http.Request) {
 	filtered := Filter(WeatherData, func(w Weather) bool {
 		filter := true
 		if town != "" {
-			filter = town == w.Town
+			filter = strings.ToLower(town) == strings.ToLower(w.Town)
 		}
 		if filter == false {
 			return filter
@@ -41,13 +45,13 @@ func fetchWeather(w http.ResponseWriter, r *http.Request) {
 			end, eErr := time.Parse(DateFormat, w.Date)
 
 			if startErr == nil && sErr == nil {
-				filter = start.After(dateRangeStart)
+				filter = start.After(dateRangeStart) || start.Equal(dateRangeStart)
 				if filter == false {
 					return filter
 				}
 			}
 			if endErr == nil && eErr == nil {
-				filter = end.Before(dateRangeEnd)
+				filter = end.Before(dateRangeEnd) || end.Equal(dateRangeEnd)
 			}
 		}
 
