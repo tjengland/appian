@@ -6,6 +6,8 @@ type Weather struct {
 	Date    string `json:"date"`
 }
 
+const DateFormat = "01/02/2006 03:04 PM"
+
 var WeatherData = []Weather{
 	{
 		Date:    "01/01/2020 12:00 AM",

@@ -1,8 +1,11 @@
 package api
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
+	"strconv"
+	"time"
 )
 
 type WeatherResponse struct {
@@ -14,31 +17,67 @@ type WeatherResponse struct {
 
 func fetchWeather(w http.ResponseWriter, r *http.Request) {
 	town := r.URL.Query().Get("town")
-	dateRange := r.URL.Query().Get("date")
+	from := r.URL.Query().Get("from")
+	to := r.URL.Query().Get("to")
 	limit := r.URL.Query().Get("limit")
 	offset := r.URL.Query().Get("offset")
 
+	offsetInt, offsetErr := strconv.Atoi(offset)
+	limitInt, limitErr := strconv.Atoi(limit)
+
+	dateRangeStart, startErr := time.Parse("2006-01-02T15:04:05.999Z", from)
+	dateRangeEnd, endErr := time.Parse("2006-01-02T15:04:05.999Z", to)
+
 	filtered := Filter(WeatherData, func(w Weather) bool {
 		filter := true
-		if location != nil {
-			filter = location == w.Location
+		if town != "" {
+			filter = town == w.Town
 		}
-		if filer == false {
+		if filter == false {
 			return filter
 		}
-		if dateRange != nil && (dateRange[0] && dateRange[1]) {
+		if startErr == nil || endErr == nil {
+			start, sErr := time.Parse(DateFormat, w.Date)
+			end, eErr := time.Parse(DateFormat, w.Date)
 
+			if startErr == nil && sErr == nil {
+				filter = start.After(dateRangeStart)
+				if filter == false {
+					return filter
+				}
+			}
+			if endErr == nil && eErr == nil {
+				filter = end.Before(dateRangeEnd)
+			}
 		}
 
 		return filter
 	})
 
+	length := len(filtered)
+
+	if offsetErr == nil && offsetInt >= 0 {
+		if offsetInt > len(filtered) {
+			filtered = []Weather{}
+		} else {
+			filtered = filtered[offsetInt:len(filtered)]
+		}
+	}
+
+	if limitErr == nil && limitInt >= 0 {
+		if limitInt < len(filtered) {
+			filtered = filtered[0:limitInt]
+		}
+	}
+
 	response := WeatherResponse{
 		Data:   filtered,
-		Limit:  limit,
-		Offset: Offset,
-		Count:  len(filtered),
+		Limit:  limitInt,
+		Offset: offsetInt,
+		Count:  length,
 	}
+
+	json.NewEncoder(w).Encode(response)
 }
 
 func Filter(it []Weather, f func(Weather) bool) []Weather {
@@ -52,7 +91,12 @@ func Filter(it []Weather, f func(Weather) bool) []Weather {
 	return filtered
 }
 
+func healthz(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+}
+
 func RequestHandler() {
 	http.HandleFunc("/api/weather", fetchWeather)
+	http.HandleFunc("/api/healthz", healthz)
 	log.Fatal(http.ListenAndServe(":8081", nil))
 }
