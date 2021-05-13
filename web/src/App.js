@@ -37,10 +37,7 @@ export default function App() {
         startDate={dateRange[0]}
         endDate={dateRange[1]}
         location={town}
-        onStartDateChange={(date) => {
-          console.log(date);
-          setDateRange([date, dateRange[1]]);
-        }}
+        onStartDateChange={(date) => setDateRange([date, dateRange[1]])}
         onEndDateChange={(date) => setDateRange([dateRange[0], date])}
         onLocationChange={(e) => setTown(e.target.value || null)}
       />
