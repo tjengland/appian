@@ -17,20 +17,11 @@ type WeatherResponse struct {
 }
 
 func fetchWeather(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-
 	town := r.URL.Query().Get("town")
-	from := r.URL.Query().Get("from")
-	to := r.URL.Query().Get("to")
-	limit := r.URL.Query().Get("limit")
-	offset := r.URL.Query().Get("offset")
-
-	offsetInt, offsetErr := strconv.Atoi(offset)
-	limitInt, limitErr := strconv.Atoi(limit)
-
-	dateRangeStart, startErr := time.Parse("2006-01-02T15:04:05.999Z", from)
-	dateRangeEnd, endErr := time.Parse("2006-01-02T15:04:05.999Z", to)
+	offset, offsetErr := strconv.Atoi(r.URL.Query().Get("offset"))
+	limit, limitErr := strconv.Atoi(r.URL.Query().Get("limit"))
+	from, fromErr := time.Parse("2006-01-02T15:04:05.999Z", r.URL.Query().Get("from"))
+	to, toErr := time.Parse("2006-01-02T15:04:05.999Z", r.URL.Query().Get("to"))
 
 	filtered := Filter(WeatherData, func(w Weather) bool {
 		filter := true
@@ -40,18 +31,18 @@ func fetchWeather(w http.ResponseWriter, r *http.Request) {
 		if filter == false {
 			return filter
 		}
-		if startErr == nil || endErr == nil {
+		if fromErr == nil || toErr == nil {
 			start, sErr := time.Parse(DateFormat, w.Date)
 			end, eErr := time.Parse(DateFormat, w.Date)
 
-			if startErr == nil && sErr == nil {
-				filter = start.After(dateRangeStart) || start.Equal(dateRangeStart)
+			if fromErr == nil && sErr == nil {
+				filter = start.After(from) || start.Equal(from)
 				if filter == false {
 					return filter
 				}
 			}
-			if endErr == nil && eErr == nil {
-				filter = end.Before(dateRangeEnd) || end.Equal(dateRangeEnd)
+			if toErr == nil && eErr == nil {
+				filter = end.Before(to) || end.Equal(to)
 			}
 		}
 
@@ -60,27 +51,29 @@ func fetchWeather(w http.ResponseWriter, r *http.Request) {
 
 	length := len(filtered)
 
-	if offsetErr == nil && offsetInt >= 0 {
-		if offsetInt > len(filtered) {
+	if offsetErr == nil && offset >= 0 {
+		if offset > len(filtered) {
 			filtered = []Weather{}
 		} else {
-			filtered = filtered[offsetInt:len(filtered)]
+			filtered = filtered[offset:len(filtered)]
 		}
 	}
 
-	if limitErr == nil && limitInt >= 0 {
-		if limitInt < len(filtered) {
-			filtered = filtered[0:limitInt]
+	if limitErr == nil && limit >= 0 {
+		if limit < len(filtered) {
+			filtered = filtered[0:limit]
 		}
 	}
 
 	response := WeatherResponse{
 		Data:   filtered,
-		Limit:  limitInt,
-		Offset: offsetInt,
+		Limit:  limit,
+		Offset: offset,
 		Count:  length,
 	}
 
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	json.NewEncoder(w).Encode(response)
 }
 
