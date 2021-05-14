@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import EditableSection from "./EditableSection";
-import WeatherCard from "./WeatherCard";
-import "./styles/App.css";
+import { EditableSection, WeatherCard } from "./components";
+import "./App.css";
 import { WeatherAPI } from "./api";
 
 export default function App() {
