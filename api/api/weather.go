@@ -8,6 +8,17 @@ type Weather struct {
 
 const DateFormat = "01/02/2006 03:04 PM"
 
+func Filter(it []Weather, f func(Weather) bool) []Weather {
+	filtered := make([]Weather, 0)
+	for _, v := range it {
+		if f(v) {
+			filtered = append(filtered, v)
+		}
+	}
+
+	return filtered
+}
+
 var WeatherData = []Weather{
 	{
 		Date:    "01/01/2020 12:00 AM",

@@ -84,17 +84,6 @@ func fetchWeather(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
-func Filter(it []Weather, f func(Weather) bool) []Weather {
-	filtered := make([]Weather, 0)
-	for _, v := range it {
-		if f(v) {
-			filtered = append(filtered, v)
-		}
-	}
-
-	return filtered
-}
-
 func healthz(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
