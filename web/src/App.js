@@ -11,22 +11,14 @@ export default function App() {
 
   useEffect(() => {
     async function fetchListings() {
-      const from = dateRange[0]
-        ? new Date(
-            dateRange[0].getTime() - dateRange[0].getTimezoneOffset() * 60000
-          ).toISOString()
-        : null;
-      const to = dateRange[1]
-        ? new Date(
-            dateRange[1].getTime() - dateRange[1].getTimezoneOffset() * 60000
-          ).toISOString()
-        : null;
-      const w = await WeatherAPI.getWeather({
-        from,
-        to,
-        town,
-      });
-      setWeather(w.data);
+      try {
+        const w = await WeatherAPI.getWeather({
+          from: getISOWithoutTZ(dateRange[0]),
+          to: getISOWithoutTZ(dateRange[1]),
+          town,
+        });
+        setWeather(w.data);
+      } catch (err) {}
     }
     fetchListings();
   }, [dateRange, town, setWeather]);
@@ -52,4 +44,10 @@ export default function App() {
       </div>
     </div>
   );
+}
+
+function getISOWithoutTZ(date) {
+  return date
+    ? new Date(date.getTime() - date.getTimezoneOffset() * 60000).toISOString()
+    : null;
 }
