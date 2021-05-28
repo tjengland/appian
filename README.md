@@ -1,3 +1,5 @@
+This was a take home challenge, leaving repo available for anyone wanting to explore a simple react fe / go be template deployed with kubernetes
+
 Live Demo:
 http://appian.routecanary.com/
 Ensure you are accessing via http, not https (may need to use Incognito Browser)
